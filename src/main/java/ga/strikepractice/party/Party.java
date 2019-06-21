@@ -4,7 +4,6 @@ import java.util.HashSet;
 import java.util.List;
 
 import org.bukkit.entity.Player;
-import org.bukkit.metadata.MetadataValue;
 import org.bukkit.metadata.Metadatable;
 import org.bukkit.scheduler.BukkitTask;
 

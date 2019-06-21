@@ -34,6 +34,7 @@ public interface CachedBlockChange {
      */
     int getZ();
 
+    @Override
     String toString();
 
 }

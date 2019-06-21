@@ -24,6 +24,7 @@ public interface FightInventory {
 
     int getSlots();
 
+    @Override
     String toString();
 
     int getPotionsLeft();
