@@ -7,11 +7,16 @@ import org.bukkit.Location;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import ga.strikepractice.StrikePractice;
 import ga.strikepractice.battlekit.BattleKit;
 import ga.strikepractice.fights.Fight;
 import ga.strikepractice.party.Party;
 import ga.strikepractice.stats.PlayerStats;
 
+/**
+ * Get instance of this class with {@link StrikePractice#getAPI()}
+ *
+ */
 public interface StrikePracticeAPI {
 
     UUID getCurrentFightsPlaybackUUID(Player p);
