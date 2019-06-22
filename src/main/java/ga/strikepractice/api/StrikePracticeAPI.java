@@ -5,9 +5,11 @@ import java.util.UUID;
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import ga.strikepractice.StrikePractice;
+import ga.strikepractice.arena.Arena;
 import ga.strikepractice.battlekit.BattleKit;
 import ga.strikepractice.fights.Fight;
 import ga.strikepractice.party.Party;
@@ -16,6 +18,9 @@ import ga.strikepractice.stats.PlayerStats;
 /**
  * Get instance of this class with {@link StrikePractice#getAPI()}
  *
+ * The API was moved here because the old API is still available in
+ * ga.strikepractice.StrikePracticeAPI, which is now deprecated and you should
+ * use this instead.
  */
 public interface StrikePracticeAPI {
 
@@ -290,6 +295,43 @@ public interface StrikePracticeAPI {
      * @return the opponent of the @param p
      */
     Player getDuelOpponent(Player p);
+
+    /**
+     * Get arena by with given name
+     * 
+     * @return the arena or null if not found
+     */
+    Arena getArena(String name);
+
+    /**
+     * Get all arenas
+     * 
+     * @return all arenas registered in strikepractice
+     */
+    List<Arena> getArenas();
+
+    /**
+     * Get kit by the given name
+     * 
+     * @return the kit or null if not found
+     */
+    BattleKit getKit(String name);
+
+    /**
+     * Get kits by the icon
+     * 
+     * @param icon
+     *            the icon item
+     * @return the kits that have same icon or null if none found
+     */
+    List<BattleKit> getKits(ItemStack icon);
+
+    /**
+     * Get all kits
+     * 
+     * @return all kits registered in strikepractice
+     */
+    List<BattleKit> getKits();
 
     /**
      * Get the StrikePractice plugin
