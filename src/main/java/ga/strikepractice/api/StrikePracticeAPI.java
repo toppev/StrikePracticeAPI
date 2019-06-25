@@ -8,7 +8,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import ga.strikepractice.StrikePractice;
 import ga.strikepractice.arena.Arena;
 import ga.strikepractice.battlekit.BattleKit;
 import ga.strikepractice.fights.Fight;
