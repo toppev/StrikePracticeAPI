@@ -1,4 +1,4 @@
-package ga.strikepractice.fights.party.partyfights;
+package ga.strikepractice.matchrecorder.playback;
 
 import java.util.HashMap;
 import java.util.HashSet;
@@ -12,27 +12,12 @@ import ga.strikepractice.battlekit.BattleKit;
 import ga.strikepractice.fights.Fight;
 import ga.strikepractice.fights.FightStatistics;
 import ga.strikepractice.fights.MatchDurationLimit;
-import ga.strikepractice.party.Party;
 
 /**
- * Placeholder class since there's no interface
+ * Placeholder class
  *
  */
-public class PartyFFA implements Fight {
-
-    /**
-     * @return the party
-     */
-    public Party getParty() {
-        return null;
-    }
-
-    /**
-     * @return the alive
-     */
-    HashSet<String> getAlive() {
-        return null;
-    }
+public class PlaybackFight implements Fight {
 
     @Override
     public void start() {

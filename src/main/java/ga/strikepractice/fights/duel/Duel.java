@@ -4,9 +4,6 @@ import ga.strikepractice.fights.Fight;
 import ga.strikepractice.matchrecorder.fightrecorder.DuelRecorder;
 
 public interface Duel extends Fight {
-    
-    
-    
 
     DuelRecorder getRecorder();
 
