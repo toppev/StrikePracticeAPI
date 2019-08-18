@@ -1,5 +1,6 @@
 ## StrikePracticeAPI
 **Note:** Compile your addon with StrikePractice.jar (the actual plugin) instead of this as this repository probably is out of date and I'm too lazy to update everything
+
 **Note:** StrikePracticeAPI was moved to ```ga.strikepractice.api``` in ```2.9.0``` update. The old version of the API is still available at ```ga.strikepractice.StrikePracticeAPI```.
 
 ## Getting Started
