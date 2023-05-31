@@ -1,22 +1,22 @@
 ## StrikePracticeAPI
 
 
-## [JavaDoc here](https://api.strikepractice.ga/)
+## [JavaDoc here](https://strikepractice-api.toppe.dev/)
 
 For example:  
-[StrikePracticeAPI.java](https://api.strikepractice.ga/doc/ga/strikepractice/api/StrikePracticeAPI.html)  
-[StrikePractice Events](https://api.strikepractice.ga/doc/ga/strikepractice/events/package-summary.html)
+[StrikePracticeAPI.java](https://strikepractice-api.toppe.dev/doc/ga/strikepractice/api/StrikePracticeAPI.html)  
+[StrikePractice Events](https://strikepractice-api.toppe.dev/doc/ga/strikepractice/events/package-summary.html)
 
 
 ## Installation
 
 Download the API jar to use in your own plugins here:
-<https://api.strikepractice.ga/strikepractice-api.jar>
+<https://strikepractice-api.toppe.dev/strikepractice-api.jar>
 
 Create a folder called libs (or whatever you want) in your plugin folder and put the jar there.
 
 ```sh
-wget https://api.strikepractice.ga/strikepractice-api.jar -P libs
+wget https://strikepractice-api.toppe.dev/strikepractice-api.jar -P libs
 ```
 
 Now include the .jar in your pom.xml or build.gradle* file.
