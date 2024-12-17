@@ -58,8 +58,9 @@ dependencies {
 ```java
 StrikePracticeAPI api = StrikePractice.getAPI();
 ```
-Now you can do anything with the api. For example
+Now you can do anything with the api.
 
+### Example: message to opponent
 ```java
 Player player = ...
 Player opponent = api.getDuelOpponent(player);
@@ -70,8 +71,9 @@ if (opponent != null) {
 
 You will find most useful methods in the ga.strikepractice.api.StrikePracticeAPI
 
+### Example: events, fight end and statistics
+
 There are also custom Bukkit events for each fight type and more. You will find these under ga.strikepractice.events. Just use them like any other Bukkit event.
-For example:
 ```java
     
 @EventHandler
@@ -84,6 +86,8 @@ public void onFightEnd(DuelEndEvent event) {
     }
 }
 ```
+
+### Example: change knockback when receiving a kit
 
 Or to set a custom spigot knockback to specific kits
 (Obviously not a working example but to get you started...):
@@ -103,4 +107,37 @@ private KnockBack getKnockback(String key) {
 }
     
 //Also see KitDeselectEvent (called when the kit is removed from the player)
+```
+
+### Example: customize elo calculations
+
+```java
+StrikePracticeAPI api = StrikePractice.getAPI();
+
+// Fully custom elo calculations
+api.setEloCalculator(elos -> {
+    // "how much better the winner was before this match"
+    int diff = elos.getWinnerOldElo() - elos.getLoserOldElo();
+    if (diff > 10) {
+        elos.setLoserNewElo(elos.getLoserOldElo() - 20);
+        elos.setWinnerNewElo(elos.getWinnerOldElo() + 20);
+    }
+    if (diff > 20) {
+        elos.setLoserNewElo(elos.getLoserOldElo() - 50);
+        elos.setWinnerNewElo(elos.getWinnerOldElo() + 50);
+    } else {
+        elos.setLoserNewElo(elos.getLoserOldElo() - 100);
+        elos.setWinnerNewElo(elos.getWinnerOldElo() + 100);
+    }
+});
+
+// ...or
+// Modify existing calculator by just multiplying the changes by 2
+StrikePracticeAPI api = StrikePractice.getAPI();
+EloCalculator defaltCalc = api.getEloCalculator();
+api.setEloCalculator(elos -> {
+    defaltCalc.calculateElo(elos);
+    elos.setWinnerNewElo(elos.getWinnerNewElo() * 2);
+    elos.setLoserNewElo(elos.getLoserNewElo() * 2);
+});
 ```
